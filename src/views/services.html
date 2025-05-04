@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponto Zero CNC Services - Serviços</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css"> <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Header - Cabeçalho -->
+    <header>
+        <div id="header" class="container">
+            <nav class="linksInitial">
+                <ul>
+                    <li><a href="/">Início</a></li> 
+                    <li><a href="/services">Serviços</a></li> 
+                    <li><img src="/img/logoImage.png" alt="Logo" class="logo"/><a href="#header"></a></li>
+                    <li><a href="/about">Sobre</a></li>
+                    <li><a href="/contact">Contato</a></li> 
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="logoMobile"><a href="#" class="logoMobile">
+            <img src="/img/logoImage.png" alt="Logo">
+          </a>
+        </div>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+        
+            <ul class="nav-bar menu">
+                <li><a href="/"><i class="fa-solid fa-house"></i> Início</a></li>
+                <li><i class="fa-solid fa-wrench"></i><a href="/services">Serviços</a></li>
+                <li><i class="fa-solid fa-book"></i><a href="/about">Sobre Nós</a></li>
+                <li><i class="fa-solid fa-message"></i><a href="/contact">Fale Conosco</a></li>
+        
+                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <!-- Seção Hero para Serviços -->
+        <section class="heroServices">
+            <div class="backgroundImageServices">
+                <!-- Imagem de fundo da seção de serviços -->
+                <img src="/img/backgroundServices.jpg" alt="Background Image Services">
+            </div>
+
+            <div class="heroContentServices">
+                <h1>PONTO ZERO CNC SERVICES</h1>
+                <p>Confira todos nossos Serviços!</p>
+                <!-- Link para a seção de serviços -->
+                <a href="#servicesPart" class="heroButtonServices">Conheça nossos serviços</a>
+            </div>
+
+            <a href="#servicesPart" class="down-arrow">▼</a>
+            <span  id="servicesPart"></span>
+        </section>
+
+        
+        <!-- Lista de serviços -->
+        <section class="services-hero">
+            <h1 >Nossos Serviços de Manutenção</h1>
+            <p>Especialistas em máquinas operatrizes para o segmento de usinagem.</p>
+        </section>
+
+        <!-- Cards de serviços -->
+        <section class="services">
+            <div class="cardContainer">
+                <div class="card">
+                    <img src="/img/logoTotScreen.png" data-gif="/img/gifServices1.gif" alt="Manutenção Preventiva"
+                        class="cardImage">
+                    <h3>Manutenção Preventiva</h3>
+                    <p>Garantimos o melhor desempenho das máquinas com inspeções periódicas e ajustes de precisão.</p>
+                </div>
+                <div class="card">
+                    <img class="cardImage" src="/img/logoTotScreen.png" data-gif="/img/gifServices2.gif"
+                        alt="Manutenção Corretiva">
+                    <h3>Manutenção Corretiva</h3>
+                    <p>Reparamos rapidamente equipamentos para minimizar o tempo de parada e aumentar a produtividade.
+                    </p>
+                </div>
+                <div class="card">
+                    <img class="cardImage" src="/img/logoTotScreen.png" data-gif="/img/gifServices3.gif"
+                        alt="Instalação de Máquinas">
+                    <h3>Instalação de Máquinas</h3>
+                    <p>Instalamos máquinas operatrizes com precisão, seguindo todas as normas técnicas do setor.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solicitar Orcamento -->
+        <section class="services-cta">
+            <a href="/contact" class="btn">Solicitar Orçamento</a>
+        </section>
+
+        <!-- Botão de WhatsApp flutuante -->
+        <a href="https://wa.me/5511952317638" target="_blank" class="btnContact">
+            <img src="/img/whatsImage.png" alt="WhatsApp">
+        </a>
+    </main>
+
+    <!-- Footer - Rodapé -->
+    <footer>
+        <hr><br>
+        <div class="container">
+            <p>&copy; 2025 Ponto Zero CNC Services. Todos os direitos reservados.</p>
+        </div>
+        <br>
+    </footer>
+
+    <script src="/script/script.js"></script>
+</body>
+
+</html>

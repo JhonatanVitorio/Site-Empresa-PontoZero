@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponto Zero CNC Services - Serviços</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Ícones da FontAwesome (para os ícones de redes sociais e outros) -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Cabeçalho da página com navegação -->
+    <header>
+        <div id="header" class="container">
+            <nav class="linksInitial">
+                <ul>
+                    <li><a href="/">Início</a></li> 
+                    <li><a href="/services">Serviços</a></li> 
+                    <li><img src="/img/logoImage.png" alt="Logo" class="logo"/><a href="#header"></a></li>
+                    <li><a href="/about">Sobre</a></li>
+                    <li><a href="/contact">Contato</a></li> 
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="logoMobile"><a href="#" class="logoMobile">
+            <img src="/img/logoImage.png" alt="Logo">
+          </a>
+        </div>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+        
+            <ul class="nav-bar menu">
+                <li><a href="/"><i class="fa-solid fa-house"></i> Início</a></li>
+                <li><i class="fa-solid fa-wrench"></i><a href="/services">Serviços</a></li>
+                <li><i class="fa-solid fa-book"></i><a href="/about">Sobre Nós</a></li>
+                <li><i class="fa-solid fa-message"></i><a href="/contact">Fale Conosco</a></li>
+        
+                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+            </ul>
+        </nav>
+    </header>
+
+
+    
+    <!-- Seção de banner de contato, imagem de fundo e sobreposição com texto -->
+    <section class="bannerContact">
+        <!-- Imagem de fundo do banner -->
+        <img class="bgBannerImage" src="/img/firstImage.gif" alt="Banner de fundo">
+
+        <div class="overlay">
+            <h2>Precisão e agilidade para manter sua produção em movimento</h2>
+            <p>Especialistas em manutenção de máquinas CNC e centros de usinagem</p>
+        </div>
+    </section>
+
+    <!-- Seção principal do formulário de contato -->
+    <main class="contactSection">
+        <div class="container">
+            <!-- Título da seção -->
+            <h1 class="section-title">Fale Conosco</h1>
+            <!-- Subtítulo -->
+            <p class="section-subtitle">Estamos prontos para atender você com agilidade e precisão.</p>
+
+            <!-- Formulário de contato -->
+            <form id="form" class="formContact">
+                <input class="inputContact" id="name" type="text" name="name" placeholder="Nome completo" required>
+                <input class="inputContact" id="email" type="email" name="email" placeholder="E-mail" required>
+                <input class="inputContact" id="phone" type="tel" name="phone" placeholder="Telefone" required>
+                <input class="inputContact" type="text" name="company" placeholder="Empresa (opcional)">
+                <textarea class="textAreaContact" name="message" placeholder="Sua mensagem..." rows="5"
+                    required></textarea>
+                <button type="submit" class="btn-contact">Enviar mensagem</button>
+            </form>
+
+            <!-- Ícones para contato via redes sociais -->
+            <div class="socialContact">
+                <!-- Ícone do WhatsApp -->
+                <a href="https://wa.me/5511952317638" target="_blank" class="iconContact" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <!-- Ícone de telefone -->
+                <a href="tel:+5511952317638" class="iconContact" title="Telefone">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <!-- Ícone do Instagram -->
+                <a href="https://www.instagram.com/jhonatanvitorio" target="_blank" class="iconContact" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Rodapé da página -->
+        <footer>
+            <hr><br>
+            <div class="container">
+                <p>&copy; 2025 Ponto Zero CNC Services. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Script -->
+    <script src="/script/script.js" defer></script>
+
+</body>
+
+</html>
