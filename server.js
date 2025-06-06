@@ -6,12 +6,17 @@ const apiRoutes = require('./src/routes/api');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Middleware para interpretar JSON e urlencoded
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Servir arquivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
 
-// API routes
+// Rotas de API
 app.use('/api', apiRoutes);
 
-// Serve views HTML
+// Rotas das views HTML
 app.get('/about', (req, res) => {
   res.sendFile(path.join(__dirname, 'src', 'views', 'about.html'));
 });
@@ -24,12 +29,11 @@ app.get('/services', (req, res) => {
   res.sendFile(path.join(__dirname, 'src', 'views', 'services.html'));
 });
 
-// Página inicial
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// 404
+// 404 fallback
 app.use((req, res) => {
   res.status(404).send('Página não encontrada');
 });
