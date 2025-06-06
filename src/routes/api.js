@@ -18,7 +18,8 @@ router.post('/send-email', async (req, res) => {
   try {
     // Enviar o e-mail
     await transporter.sendMail({
-      from: email, // Remetente
+      from: `"${name}" <${process.env.EMAIL_USER}>`, // Remetente
+      replyTo: email,
       to: process.env.EMAIL_USER, // Destinatário
       subject: 'Novo contato do site', // Assunto do e-mail
       html: `
