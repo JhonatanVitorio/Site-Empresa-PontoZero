@@ -1,24 +1,36 @@
 require('dotenv').config();
 const express = require('express');
-const bodyParser = require('body-parser');
 const path = require('path');
 const apiRoutes = require('./src/routes/api');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-// 1) Servir arquivos estáticos (CSS, JS, imagens e também seus HTML)
+// Servir arquivos estáticos: CSS, JS, imagens etc.
 app.use(express.static(path.join(__dirname, 'public')));
 
-// 2) Rotas de API
+// Rotas para páginas estáticas
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+app.get('/services', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'services.html'));
+});
+
+app.get('/about', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'about.html'));
+});
+
+// Rotas da API
 app.use('/api', apiRoutes);
 
-// 3) Qualquer rota não reconhecida, devolve o index.html
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// 404 para rotas desconhecidas
+app.use((req, res) => {
+  res.status(404).send('Página não encontrada');
 });
 
 app.listen(PORT, () => {
